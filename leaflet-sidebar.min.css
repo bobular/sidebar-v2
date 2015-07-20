@@ -17,7 +17,7 @@
         left: 10px;
         top: 10px;
         bottom: 10px;
-        transition: width 500ms
+        transition: width 400ms
     }
 }
 
@@ -154,7 +154,7 @@
 
 @media (min-width: 768px) {
     .sidebar-map .leaflet-left {
-        transition: left 500ms
+        transition: left 400ms
     }
 }
 

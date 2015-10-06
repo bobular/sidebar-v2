@@ -89,7 +89,9 @@ L.Control.Sidebar = L.Control.extend({
         // remove old active highlights and set new highlight
         for (i = this._tabitems.length - 1; i >= 0; i--) {
             child = this._tabitems[i];
-            if (child.firstChild.hash == '#' + id)
+            //if (child.firstChild.hash == '#' + id)
+            var lakis = child.firstChild.id;
+            if (child.firstChild.id == '#' + id)
                 L.DomUtil.addClass(child, 'active');
             else if (L.DomUtil.hasClass(child, 'active'))
                 L.DomUtil.removeClass(child, 'active');
@@ -127,7 +129,8 @@ L.Control.Sidebar = L.Control.extend({
         if (L.DomUtil.hasClass(this, 'active'))
             this._sidebar.close();
         else
-            this._sidebar.open(this.firstChild.hash.slice(1));
+            this._sidebar.open(this.firstChild.id.slice(1));
+        //this._sidebar.open(this.firstChild.hash.slice(1));
 
     }
 });
